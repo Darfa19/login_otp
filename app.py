@@ -4,7 +4,7 @@ import smtplib, ssl, random, os
 app = Flask(__name__)
 app.secret_key = "secret-key-sangat-rahasia"
 
-PASSWORD_DEFAULT = "1234"
+PASSWORD_DEFAULT = "12345"
 
 # Konfigurasi email pengirim (isi dengan email kamu)
 EMAIL_SENDER = "akuname00@gmail.com"
