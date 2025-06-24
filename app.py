@@ -61,5 +61,5 @@ def success():
     return render_template("success.html")
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # port dari environment Railway
+    port = int(os.environ.get("PORT", 8080))  # port dari environment Railway
     app.run(debug=False, host="0.0.0.0", port=port)
