@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef1f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input {
+  border: 1px solid #ccc;
+}
+
+input.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+
+button {
+  background: #4285f4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3367d6;
+}
+
+  </style>
+</head>
+<body>
+
+  <form method="POST">
+    <h2>Login</h2>
+    <input type="email" name="email" placeholder="Email" required {% if error %}class="error"{% endif %}>
+    <input type="password" name="password" placeholder="Password" required {% if error %}class="error"{% endif %}>
+    {% if error %}
+      <div class="error-message">{{ error }}</div>
+    {% endif %}
+    <button type="submit">Login</button>
+  </form>
+
+</body>
+</html>
